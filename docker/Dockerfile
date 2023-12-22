@@ -7,7 +7,7 @@ RUN mkdir /data/ && wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda
 RUN bash /data/miniconda.sh -b 
 RUN /root/miniconda3/bin/conda init bash && source /root/.bashrc && rm -f /data/miniconda.sh
 
-RUN /root/miniconda3/bin/python -m pip install 'aie-sdk[engine]' 'aie-sdk[openapi]' jupyter==1.0.0 pyopenssl==23.2.0
+RUN /root/miniconda3/bin/python -m pip install 'aie-sdk[engine]' 'aie-sdk[openapi]' jupyter==1.0.0 ipykernel==6.23.1 notebook==6.5.4 pyopenssl==23.2.0
 
 RUN mkdir /jupyter
 COPY start.sh /start.sh
